@@ -1,0 +1,351 @@
+CREATE TABLE advertisement (
+  adid bigint IDENTITY(1,1) NOT NULL,
+  name varchar(50) NULL,
+  adscript text,
+  type tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (adid)
+);
+
+
+CREATE TABLE blockip (
+  id int IDENTITY(1,1) NOT NULL,
+  ipaddress varchar(15) NOT NULL,
+  date_added datetime DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE comments (
+  commentid int IDENTITY(1,1) NOT NULL,
+  videoid bigint NULL,
+  username varchar(20) NULL,
+  _comment text,
+  added_date datetime NULL,
+  isenabled tinyint NOT NULL DEFAULT '1',
+  type tinyint NOT NULL DEFAULT '0',
+  points int NOT NULL DEFAULT '0',
+  isapproved tinyint NOT NULL DEFAULT '1',
+  replyid bigint NOT NULL DEFAULT '0',
+  profileid varchar(20) NULL,
+  level varchar(10) NULL,
+  PRIMARY KEY (commentid)
+);
+
+CREATE TABLE [configurations] (
+  id smallint NOT NULL,
+  description varchar(50) NULL,
+  value text,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE dictionary (
+  id int IDENTITY(1,1) NOT NULL,
+  value varchar(100) NOT NULL,
+  type tinyint NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE error_log (
+  id int IDENTITY(1,1) NOT NULL,
+  description varchar(500) NULL,
+  url varchar(200) NULL,
+  stack_trace text,
+  added_date datetime DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE friends (
+  id bigint IDENTITY(1,1) NOT NULL,
+  username varchar(20) NULL,
+  friend_username varchar(20) NULL,
+  status tinyint NOT NULL DEFAULT '1',
+  msg varchar(100) NULL,
+  date_added datetime DEFAULT NULL,
+  val_key varchar(30) NULL,
+  reject_key varchar(30) NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE languages (
+  languageid smallint IDENTITY(1,1) NOT NULL,
+  culturename varchar(15)  NOT NULL,
+  language varchar(100)  NOT NULL,
+  region varchar(100)  NOT NULL,
+  isdefault tinyint NOT NULL DEFAULT '0',
+  isselected tinyint NOT NULL DEFAULT '0',
+  icon varchar(50)  NOT NULL,
+  filename varchar(50)  NOT NULL,
+  PRIMARY KEY (languageid)
+);
+
+CREATE TABLE mailbox (
+  id bigint IDENTITY(1,1) NOT NULL,
+  _from varchar(20)  DEFAULT NULL,
+  _to varchar(20)  DEFAULT NULL,
+  subject varchar(100)  DEFAULT NULL,
+  body text ,
+  isread tinyint NOT NULL DEFAULT '0',
+  messagetype tinyint NOT NULL DEFAULT '0',
+  sendertype tinyint NOT NULL DEFAULT '0',
+  isenabled tinyint NOT NULL DEFAULT '1',
+  date_added datetime DEFAULT NULL,
+  groupid bigint DEFAULT '0',
+  content_id bigint DEFAULT '0',
+  replyid bigint NOT NULL DEFAULT '0',
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE mailtemplates (
+  id smallint IDENTITY(1,1) NOT NULL,
+  templatekey varchar(10) DEFAULT NULL,
+  description varchar(100) DEFAULT NULL,
+  tags varchar(300) DEFAULT NULL,
+  subjecttags varchar(100) DEFAULT NULL,
+  subject varchar(150) DEFAULT NULL,
+  contents text,
+  type varchar(15) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE user_ratings (
+  id bigint IDENTITY(1,1) NOT NULL,
+  itemid bigint DEFAULT NULL,
+  username varchar(20)  DEFAULT NULL,
+  type tinyint NOT NULL DEFAULT '0',
+  rating tinyint NOT NULL DEFAULT '0',
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE useractivities (
+  activityid bigint IDENTITY(1,1) NOT NULL,
+  username varchar(20)  DEFAULT NULL,
+  title varchar(100)  DEFAULT NULL,
+  activity text ,
+  added_date datetime DEFAULT NULL,
+  liked int DEFAULT '0',
+  disliked int DEFAULT '0',
+  comments int DEFAULT '0',
+  poster_username varchar(20) DEFAULT NULL,
+  PRIMARY KEY (activityid)
+);
+
+CREATE TABLE users (
+  userid bigint IDENTITY(1,1) NOT NULL,
+  username varchar(20)  NOT NULL DEFAULT '',
+  password varchar(128)  NOT NULL,
+  email varchar(50)  NOT NULL,
+  countryname varchar(50)  NOT NULL,
+  firstname varchar(50)  DEFAULT NULL,
+  lastname varchar(50)  DEFAULT NULL,
+  gender varchar(7)  NOT NULL DEFAULT 'Male',
+  birthdate datetime DEFAULT NULL,
+  accounttype smallint DEFAULT '0',
+  views int NOT NULL DEFAULT '0',
+  picturename varchar(100)  DEFAULT 'none',
+  isenabled tinyint NOT NULL DEFAULT '1',
+  issendmessages tinyint NOT NULL DEFAULT '0',
+  isallowbirthday tinyint NOT NULL DEFAULT '0',
+  register_date datetime DEFAULT NULL,
+  last_login datetime DEFAULT NULL,
+  val_key varchar(50)  DEFAULT 'none',
+  relationshipstatus varchar(30)  DEFAULT 'single',
+  aboutme varchar(300)  DEFAULT NULL,
+  website varchar(128)  DEFAULT NULL,
+  hometown varchar(50)  DEFAULT NULL,
+  currentcity varchar(50)  DEFAULT NULL,
+  zipcode varchar(50)  DEFAULT NULL,
+  occupations varchar(300)  DEFAULT NULL,
+  companies varchar(300)  DEFAULT NULL,
+  schools varchar(300)  DEFAULT NULL,
+  interests varchar(300)  DEFAULT NULL,
+  movies varchar(300)  DEFAULT NULL,
+  musics varchar(300)  DEFAULT NULL,
+  books varchar(300)  DEFAULT NULL,
+  isautomail tinyint NOT NULL DEFAULT '1',
+  mail_vcomment tinyint NOT NULL DEFAULT '1',
+  mail_ccomment tinyint NOT NULL DEFAULT '1',
+  mail_pmessage tinyint NOT NULL DEFAULT '1',
+  mail_finvite tinyint NOT NULL DEFAULT '1',
+  mail_subscribe tinyint NOT NULL DEFAULT '1',
+  privacy_fmessages tinyint NOT NULL DEFAULT '1',
+  videos_watched int NOT NULL DEFAULT '0',
+  subscribers int NOT NULL DEFAULT '0',
+  channel_iscomments tinyint NOT NULL DEFAULT '1',
+  channel_isfriends tinyint NOT NULL DEFAULT '1',
+  channel_issubscribers tinyint NOT NULL DEFAULT '1',
+  channel_isgroups tinyint NOT NULL DEFAULT '1',
+  channel_isphotos tinyint NOT NULL DEFAULT '1',
+  channel_isblogs tinyint NOT NULL DEFAULT '1',
+  channel_isaudios tinyint NOT NULL DEFAULT '1',
+  channel_name varchar(50)  DEFAULT NULL,
+  channel_theme varchar(20)  DEFAULT 'red',
+  stat_videos int NOT NULL DEFAULT '0',
+  stat_friends int NOT NULL DEFAULT '0',
+  stat_subscribers int NOT NULL DEFAULT '0',
+  stat_favorites int NOT NULL DEFAULT '0',
+  stat_groups int NOT NULL DEFAULT '0',
+  stat_messages int NOT NULL DEFAULT '0',
+  stat_comments int NOT NULL DEFAULT '0',
+  stat_photos int NOT NULL DEFAULT '0',
+  stat_blogs int NOT NULL DEFAULT '0',
+  stat_audios int NOT NULL DEFAULT '0',
+  stat_audiofavorites int NOT NULL DEFAULT '0',
+  type tinyint NOT NULL DEFAULT '0',
+  readonly tinyint NOT NULL DEFAULT '0',
+  fb_uid varchar(20)  NOT NULL DEFAULT '0',
+  roleid int NOT NULL DEFAULT '0',
+  stat_forum_posts int NOT NULL DEFAULT '0',
+  stat_forum_points int NOT NULL DEFAULT '0',
+  stat_qa smallint NOT NULL DEFAULT '0',
+  stat_qanswers smallint NOT NULL DEFAULT '0',
+  stat_qafavorites smallint NOT NULL DEFAULT '0',
+  PRIMARY KEY (userid)
+);
+
+CREATE TABLE users_ipaddress (
+  serialno bigint IDENTITY(1,1) NOT NULL,
+  username varchar(20)  DEFAULT NULL,
+  ipaddress varchar(15)  DEFAULT NULL,
+  date_added datetime DEFAULT NULL,
+  PRIMARY KEY (serialno)
+);
+
+CREATE TABLE view_stat_thismonth (
+  ContentID bigint NOT NULL,
+  itemtype tinyint NOT NULL DEFAULT '1',
+  views int NOT NULL DEFAULT '1',
+  added_date datetime NOT NULL,
+  PRIMARY KEY (ContentID,itemtype)
+);
+
+CREATE TABLE view_stat_thisweek (
+  ContentID bigint NOT NULL DEFAULT '1',
+  itemtype tinyint NOT NULL DEFAULT '1',
+  views int NOT NULL DEFAULT '1',
+  added_date datetime NOT NULL,
+  PRIMARY KEY (ContentID,itemtype)
+);
+
+CREATE TABLE view_stat_today (
+  ContentID bigint NOT NULL DEFAULT '0',
+  itemtype tinyint NOT NULL DEFAULT '1',
+  views int NOT NULL DEFAULT '1',
+  added_date datetime DEFAULT NULL,
+  PRIMARY KEY (ContentID,itemtype)
+);
+
+INSERT INTO advertisement VALUES ('Horizontal - 728x90', '<img src=\"http://www.remix-video.com/images/ads/ads.jpg\" alt=\"728x90 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Horizontal - 728x90', 'no script', '1');
+INSERT INTO advertisement VALUES ('Horizontal - 468x60', '<img src=\"http://www.remix-video.com/images/ads/468X60.jpg\" alt=\"468x60 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Horizontal - 468x60', 'no script', '1');
+INSERT INTO advertisement VALUES ('Horizontal - 234x60', '<img src=\"http://www.remix-video.com/images/ads/234_60.jpg\" alt=\"234x60 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Horizontal - 234x60', 'no script', '1');
+INSERT INTO advertisement VALUES ('Vertical - 120x600', 'no script', '0');
+INSERT INTO advertisement VALUES ('Vertical - 120x600', 'no script', '1');
+INSERT INTO advertisement VALUES ('Vertical - 160x600', '<img src=\"http://www.remix-video.com/images/ads/160x600.jpg\" alt=\"160x600 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Vertical - 160x600', 'no script', '1');
+INSERT INTO advertisement VALUES ('Vertical - 120x240', 'no script', '0');
+INSERT INTO advertisement VALUES ('Vertical - 120x240', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 336x280', '<img src=\"http://www.remix-video.com/images/ads/336x280.jpg\" alt=\"336x280 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Square - 336x280', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 300x250', '<img src=\"http://www.remix-video.com/images/ads/300x225.jpg\" alt=\"300x225 AD Banner\" />', '0');
+INSERT INTO advertisement VALUES ('Square - 300x250', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 250x250', 'no script', '0');
+INSERT INTO advertisement VALUES ('Square - 250x250', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 200x200', 'no script', '0');
+INSERT INTO advertisement VALUES ('Square - 200x200', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 180x150', 'no script', '0');
+INSERT INTO advertisement VALUES ('Square - 180x150', 'no script', '1');
+INSERT INTO advertisement VALUES ('Square - 125x125', 'no script', '0');
+INSERT INTO advertisement VALUES ('Square - 125x125', 'no script', '1');
+
+
+INSERT INTO languages VALUES ('en-US', 'English', 'United States', '1', '1', 'flag-united-states', 'vsk.resx');
+INSERT INTO languages VALUES ('cs-CZ', 'Czech', 'Czech Republic', '0', '0', 'flag-czech-republic', 'vsk.cs-CZ.resx');
+INSERT INTO languages VALUES ('ar-SA', 'Arabic', 'Saudi Arabia', '0', '0', 'flag-saudi-arabia', 'vsk.ar-SA.resx');
+INSERT INTO languages VALUES ('de-DE', 'German', 'Germany', '0', '1', 'flag-germany', 'vsk.de-DE.resx');
+INSERT INTO languages VALUES ('el-GR', 'Greek', 'Greece', '0', '0', 'flag-greece', 'vsk.el-GR.resx');
+INSERT INTO languages VALUES ('es-ES', 'Spanish', 'Spain', '0', '1', 'flag-spain', 'vsk.es-ES.resx');
+INSERT INTO languages VALUES ('fr-FR', 'French', 'France', '0', '1', 'flag-france', 'vsk.fr-FR.resx');
+INSERT INTO languages VALUES ('hi-IN', 'Hindi', 'India', '0', '0', 'flag-india', 'vsk.hi-IN.resx');
+INSERT INTO languages VALUES ('hr-HR', 'Croatian', 'Croatia', '0', '0', 'flag-croatia', 'vsk.hr-HR.resx');
+INSERT INTO languages VALUES ('hu-HU', 'Hungarian', 'Hungary', '0', '0', 'flag-hungary', 'vsk.hu-HU.resx');
+INSERT INTO languages VALUES ('it-IT', 'Italian', 'Italy', '0', '1', 'flag-italy', 'vsk.it-IT.resx');
+INSERT INTO languages VALUES ('ja-JP', 'Japanese', 'Japan', '0', '0', 'flag-japan', 'vsk.ja-JP.resx');
+INSERT INTO languages VALUES ('nl-NL', 'Dutch', 'Netherlands', '0', '1', 'flag-netherlands', 'vsk.nl-NL.resx');
+INSERT INTO languages VALUES ('pt-BR', 'Portuguese', 'Brazil', '0', '1', 'flag-brazil', 'vsk.pt-BR.resx');
+INSERT INTO languages VALUES ('ro-RO', 'Romanian', 'Romania', '0', '0', 'flag-romania', 'vsk.ro-RO.resx');
+INSERT INTO languages VALUES ('ru-RU', 'Russian', 'Russian Federation', '0', '1', 'flag-russian-federation', 'vsk.ru-RU.resx');
+INSERT INTO languages VALUES ('sv-SE', 'Swedish', 'Sweden', '0', '0', 'flag-sweden', 'vsk.sv-SE.resx');
+INSERT INTO languages VALUES ('tr-TR', 'Turkish', 'Turkey', '0', '1', 'flag-turkey', 'vsk.tr-TR.resx');
+INSERT INTO languages VALUES ('zh-CHS', 'Chinese (simplified)', 'China', '0', '0', 'flag-china', 'vsk.zh-CHS.resx');
+INSERT INTO languages VALUES ('zh-CHT', 'Chinese (traditional)', 'China', '0', '0', 'flag-china', 'vsk.zh-CHT.resx');
+
+
+INSERT INTO configurations VALUES ('1', 'General - Website Title', '.NET vFaceWall');
+INSERT INTO configurations VALUES ('2', 'General - Website Description', '');
+INSERT INTO configurations VALUES ('4', 'General - Admin Mail', 'noreply@example.com');
+INSERT INTO configurations VALUES ('5', 'General - Admin_Mail_DisplayName', '.NET vFaceWall');
+INSERT INTO configurations VALUES ('7', 'General - Database Type', '1');
+INSERT INTO configurations VALUES ('8', 'General - Screen_Content', '1');
+INSERT INTO configurations VALUES ('9', 'General - Content Approval', '1');
+INSERT INTO configurations VALUES ('10', 'General - Spam Count', '5');
+INSERT INTO configurations VALUES ('11', 'General - Cache Duration', '60');
+INSERT INTO configurations VALUES ('12', 'General - Store IP Address', 'true');
+INSERT INTO configurations VALUES ('17', 'General - Channel Page Size', '36');
+INSERT INTO configurations VALUES ('22', 'General - Channel Item Priority Show', '0');
+INSERT INTO configurations VALUES ('23', 'General - Channel Views', '1');
+INSERT INTO configurations VALUES ('24', 'General - Channel Custom Theme', 'false');
+INSERT INTO configurations VALUES ('26', 'General - Maximum Dynamic Urls', '50');
+INSERT INTO configurations VALUES ('74', 'Feature - Channels', '1');
+INSERT INTO configurations VALUES ('78', 'Feature - Friends', '1');
+INSERT INTO configurations VALUES ('84', 'Feature - Comments', '1');
+INSERT INTO configurations VALUES ('86', 'Feature - Statistics', '1');
+INSERT INTO configurations VALUES ('90', 'Feature - Advertisement', '1');
+INSERT INTO configurations VALUES ('91', 'Feature - Email', '0');
+INSERT INTO configurations VALUES ('92', 'Feature - Email Verification', '0');
+INSERT INTO configurations VALUES ('94', 'Feature - Adult Verification', '1');
+INSERT INTO configurations VALUES ('95', 'Feature - Views', '1');
+INSERT INTO configurations VALUES ('96', 'Feature - Date', '1');
+INSERT INTO configurations VALUES ('99', 'Feature - UserName', '1');
+INSERT INTO configurations VALUES ('100', 'Feature - Rating', '1');
+INSERT INTO configurations VALUES ('101', 'Login - Rating', '1');
+INSERT INTO configurations VALUES ('102', 'Login - Comments', '1');
+INSERT INTO configurations VALUES ('103', 'Login - Advice', '1');
+INSERT INTO configurations VALUES ('109', 'Social - Feedburner Url', 'feed://feeds.feedburner.com/vsk');
+INSERT INTO configurations VALUES ('110', 'Social - Facebook Url', 'http://www.facebook.com/vsk');
+INSERT INTO configurations VALUES ('111', 'Social - Twitter Url', 'http://twitter.com/#!/vsk');
+INSERT INTO configurations VALUES ('112', 'Social - Facebook App ID', 'fbappid');
+INSERT INTO configurations VALUES ('113', 'Social - Facebook App Key', null);
+INSERT INTO configurations VALUES ('114', 'Social - Facebook Secret Key', 'fbsecretekey');
+INSERT INTO configurations VALUES ('115', 'Social - Share Buttons', 'true');
+INSERT INTO configurations VALUES ('116', 'Social - Addthis PubID', 'vsk');
+INSERT INTO configurations VALUES ('117', 'Social - Twitter UID', 'vsk');
+INSERT INTO configurations VALUES ('118', 'Social - Show Facebook Meta Tags', 'true');
+INSERT INTO configurations VALUES ('6', 'General - Maxiumum Pagination Links', '501');
+INSERT INTO configurations VALUES ('97', 'Feature - Membership Registration', '1');
+INSERT INTO configurations VALUES ('171', 'Layout Types', '1');
+INSERT INTO configurations VALUES ('183', 'Site - Analytics', '');
+INSERT INTO configurations VALUES ('192', 'General - Default Culture Info', 'en');
+INSERT INTO configurations VALUES ('186', 'Site - Templates', '0');
+
+INSERT INTO mailtemplates VALUES ('USRREG', 'Used for sending mail to new user when he signup using registration form', '[username],[password],[key_url]', '[username]', '[username] you are successfully registered with us', '<p>Dear [username],<br /> <br /> You successfully registered with us<br /> <br /><strong> </strong>Click on url shown below to activate your account.<br /> [key_url]<br /> <br /> Regards<br /> Video Starter Kit Advance Edition Team<br /> <a href=\"javascript:void(0);/*1259049511691*/\">http://www.remix-video.com</a></p>', 'general');
+INSERT INTO mailtemplates VALUES ('USRCHEMAIL', 'Used for sending mail when user change his/her email address', '[username],[key_url]', '[username]', 'Video Starter Kit Advance Edition - Email Change Notification', 'Dear [username],<br />\r\n<br />\r\nEmail change notification has been received to us, click on url shown below to verify&nbsp; and update email address with us.<br />\r\n<br />\r\n[key_url]<br />\r\n<br />\r\nRegards<br />\r\nVideo Starter Kit Advance Edition Team,<br />\r\nhttp://www.remix-video.com', 'general');
+INSERT INTO mailtemplates VALUES ('FRDREQ', 'Used for sending mail when user send friend request', '[username],[friend_username],[message]', '[username],[friend_username]', '[username] send friend invitation to you on Video Starter Kit Advance Edition', 'Dear [friend_username],<br />\r\n<br />\r\n[username] send friend invitation to you to join his network on Video Starter Kit Advance Edition.<br />\r\n<br />\r\nUser Message:<br />\r\n[message]<br />\r\n<br />\r\nRegards<br />\r\nVideo Starter Kit Advance Edition Team,<br />\r\nhttp://www.remix-video.com', 'general');
+INSERT INTO mailtemplates VALUES ('FORPASS', 'Used for sending mail when user retrieve password using forget password form', '[username],[password]', '[username]', 'Video Starter Kit - Forgot Password Request', '<p>Dear [username],<br /> <br /> Please click on url below to authorize and update your account password.</p>\r\n<p>[ur]<br /> <br /> Regards<br /> Video Starter Kit Team,<br /> http://www.remix-video.com</p>', 'general');
+INSERT INTO mailtemplates VALUES ('USRPROFUPD', 'It is used to send notification when user profile updated on myaccount section.', '[username]', '[username]', 'Your profile updated for remix-video.com', '<span style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\" class=\"Apple-style-span\"><span style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\" class=\"Apple-style-span\">Dear [username],<br />\r\n<br />\r\nAs requested, your profile has been updated. <br />\r\n<br />\r\nTo update your profile please visit page :<span class=\"Apple-converted-space\"> </span>http://www.remix-video.com/myaccount/Profile.aspx<br />\r\n<br />\r\nThank you for using<span class=\"Apple-converted-space\"> Remix video</span><br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('FRDACP', 'Used for sending mail when invited user accept friend inviation', '[username],[friend_username]', '[username],[friend_username]', 'Your friend invitation accepted by [friend_username] - Video Starter Kit Advance Edition', 'Dear [username],<br />\r\n<br />\r\nYour friend invitation on http://www.remix-video.com has been accepted by [friend_username].<br />\r\n<br />\r\nVisit your profile on http://www.remix-video.com/user/[username].aspx<br />\r\nVisit friend profile on http://www.remix-video.com/user/[friend_username].aspx<br />\r\n<br />\r\nRegards<br />\r\nVideo Starter Kit Advance Edition Team,<br />\r\nhttp://www.remix-video.com', 'general');
+INSERT INTO mailtemplates VALUES ('FORUMTOPIC', '<p>This template is used to send mail to admin when new topic posted by user.</p>', '[username],[subject],[content],[url]', '[username],[subject]', '[poster_username] Posted New Topic On Forum', '<p>Dear Moderator,</p>\r\n<p>[username] posted new topic within forum.</p>\r\n<p>***************************************</p>\r\n<p><a title=\"[subject]\" href=\"[url]\">[subject]</a></p>\r\n<p>[content]</p>\r\n<p>****************************************</p>\r\n<p>Go to admin section to approve or reject topic.</p>', 'general');
+INSERT INTO mailtemplates VALUES ('FORUMTA', '<p>This template is used to send mail to author once he / she posted new topic in forum.</p>', '[username],[subject],[content],[url]', '[username],[subject]', 'Dear [username], Your Topic Posted Successfully', '<p>Dear [username],</p>\r\n<p>Your topic has been posted successfully and is waiting for moderator review.</p>\r\n<p>************************************************</p>\r\n<p><a title=\"[subject]\" href=\"[url]\">[subject]</a></p>\r\n<p>[content]</p>\r\n<p>************************************************</p>\r\n<p>Keep posting topic.</p>\r\n<p>Regards.</p>\r\n<p>Remix Video Team</p>\r\n<p><a title=\"Remix Video\" href=\"http://www.remix-video.com\">http://www.remix-video.com</a></p>', 'all');
+INSERT INTO mailtemplates VALUES ('FORUMTREP', '<p>This template is used to send mail to all users who post replies on existing topic.</p>', '[poster_username],[username],[subject],[content],[url]', '[poster_username],[username],[subject]', '[poster_username] Post a New Reply On Your Topic', '<p>Dear [username],</p>\r\n<p>[poster_username] post a new reply to your topic</p>\r\n<p>**************************************</p>\r\n<p>[content]</p>\r\n<p>*************************************</p>\r\n<p>Go to topic : <a title=\"[subject]\" href=\"[url]\">[url]</a></p>', 'general');
+INSERT INTO mailtemplates VALUES ('USRPRIVCHN', 'It is used to send notification when user change his / her privacy settings', '[username]', '[username]', 'Your privacy settings changed for Remix-video.com', '<span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\">Dear [username],<br />\r\n<br />\r\nAs requested, your privacy settings has been updated.<br />\r\n<br />\r\nTo update your privacy settings visit page :<span class=\"Apple-converted-space\"> </span>http://www.remix-video.com/myaccount/Privacy.aspx<br />\r\n<br />\r\nThank you for using<span class=\"Apple-converted-space\"> Remix Video</span><br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('USREMLOPT', 'It is used to send mail notification to user when email options has been updated on user myaccount.', '[username]', '[username]', 'Your email settings changed for remix-video.com', '<span style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\" class=\"Apple-style-span\"><span style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\" class=\"Apple-style-span\">Dear [username],<br />\r\n<br />\r\nAs requested, your email settings has been updated.<br />\r\n<br />\r\nTo update your email settings please visit page :<span class=\"Apple-converted-space\"> </span>http://www.remix-video.com/myaccount/EmailOptions.aspx<br />\r\n<br />\r\nThank you for using<span class=\"Apple-converted-space\"> Remix video</span><br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('USREMLCREQ', 'It is used to send validation link for changing email address.', '[username],[key_url],[email]', '[username]', 'Change your email for remix-video.com', '<span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\">Dear [username],<br />\r\n<br />\r\nIn order to change your email address, please click on link below.<br />\r\n<br />\r\nhttp://www.remix-video.com/myaccount/EmailValidate.aspx?key=[key_url]&amp;user=[username]&amp;eml=[email];<br />\r\n<br />\r\nThank you for using<span class=\"Apple-converted-space\"> Remix Video</span><br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('USREMLCHNG', 'It is used to send notification to user when user email id successfully changed.', '[username]', '[username]', 'Your email changed for remix-video.com', '<span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\">Dear [username],<br />\r\n<br />\r\nAs requested, your email id has been updated.<br />\r\n<br />\r\nTo update your email id please visit page :<span class=\"Apple-converted-space\"> </span>http://www.remix-video.com/myaccount/EmailOptions.aspx<br />\r\n<br />\r\nThank you for using<span class=\"Apple-converted-space\"> Remix Video</span><br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('EMLSENDNOT', 'It is used to send private user message to user email id', '[susername],[rusername],[message]', '[susername],[rusername]', '[susername] sends a private message to you on remix-video.com', '<span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\">Dear [rusername],<br />\r\n<br />\r\n[susername] sends a private message to you on remix-video.com<br />\r\n<strong><br />\r\n</strong>************************************<br />\r\n</span></span><span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\"><strong>[subject]</strong></span></span><br />\r\n<span class=\"Apple-style-span\" style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\"><span class=\"Apple-style-span\" style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\"> [message]<br />\r\n************************************<br />\r\nTo view your message visit page<br />\r\n<br />\r\nhttp://www.remix-video.com/myaccount/inbox/Default.aspx<br />\r\n<br />\r\nRegards<br />\r\nwww.remix-video.com</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('MEDCMT', 'It is used to send email to author of content and all other comment poster when new comment posted b', '[cusername],[rusername],[mediatype],[comment],[url]', '[cusername],[rusername],[mediatype]', '[cusername] commented  on a [mediatype] of you - Remix Video', 'Dear [rusername]<br />\r\n<br />\r\n[cusername] commented on a [mediatype] of you on remix-video.com<br />\r\n<br />\r\n[cusername] wrote:-<br />\r\n<br />\r\n[comment]<br />\r\n<br />\r\n<span style=\"border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;\" class=\"Apple-style-span\"><span style=\"border-collapse: collapse; font-family: arial,sans-serif; font-size: 13px;\" class=\"Apple-style-span\">To see the comment thread, follow the link below:<br />\r\n[url]<br />\r\n<br />\r\nThanks<br />\r\nBollywoodCollection Team</span></span>', 'general');
+INSERT INTO mailtemplates VALUES ('GPSNDML', '', '[username],[ausername],[url]', '[username],[ausername]', '[ausername] Posted New Post in Group', '<p>Dear [username],</p>\r\n<p>[ausername] posted new post in group.</p>\r\n<p>Click link below to visit group.</p>\r\n<p>[url]</p>', 'all');
+INSERT INTO mailtemplates VALUES ('QAANSP', '<p>Send mail to auther of question when new answer has been posted on his, her question.</p>', '[pusername],[ausername],[qtitle],[answer],[url]', '[pusername],[ausername]', '[pusername] Posted New Answer on Your Question', '<p>Dear [ausername],</p>\r\n<p>[pusername] posted new answer on your question</p>\r\n<p>[url]</p>\r\n<p>[qtitle]</p>\r\n<p>.....................................................................</p>\r\n<p>[answer]</p>\r\n<p>.....................................................................</p>', 'all');
+INSERT INTO mailtemplates VALUES ('ASKQA', '<p>Send mail to admin when user ask new question</p>', '[username],[ptitle],[purl],[pdescription]', '[username]', '[username] Asked New Question', '<p>Dear Moderator,</p>\r\n<p>[username] asked new question.</p>\r\n<p>.............................................</p>\r\n<p>[purl]</p>\r\n<p>[ptitle]</p>\r\n<p>[pdescription]</p>\r\n<p>.............................................</p>', 'all');
+INSERT INTO mailtemplates VALUES ('USRREGADM', '<p>Send mail to admin when new user registered on website</p>', '[username],[email]', '[username]', 'User Complete Registeration', '<p>Dear [Moderator],</p>\r\n<p>[username] complete registration process on remix-video.com</p>', 'all');
+INSERT INTO mailtemplates VALUES ('USRCNTAPP', '<p>Send mail to user when admin approve user content</p>', '[username],[status],[contenttype],[url]', '[username],[status]', 'Your [contentype] has been [status] on remix-video.com', '<p>Dear [username],</p>\r\n<p>Your [contenttype] has been [status] on remix-video.com. You can view your approved [contenttype] by visiting url shown below.</p>\r\n<p>[url]</p>\r\n<p>......................</p>', 'all');
+INSERT INTO mailtemplates VALUES ('USRAPRCNT', '<p>Send notification mail to admin when new content added by user</p>', '[username],[contenttype],[url]', '[username],[contenttype]', '[username] Added new [contenttype]', '<p>Dear Moderator,</p>\r\n<p>[username] added new [contenttype] on remix-video.com</p>\r\n<p>.........................................</p>', 'all');

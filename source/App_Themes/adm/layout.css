@@ -1,0 +1,536 @@
+﻿/* ----- Generic styles --------------------------------------------------*/
+body {background: #fff; padding-top:50px;} 
+div#md{margin: 10px auto 10px auto;padding:5px;width:950px;background:#fff;}
+div#header{background: #778CCA;color:#fff;padding:10px;text-align:center;}
+div#header h1 {	font:normal 2.0em 'Trebuchet MS', Arial, Helvetica, sans-serif;	color: #fff;margin: 0px;}
+div#footer{padding:10px;background:#778CCA;color:#fff;text-align:center;}
+div#bleft{background: #fff;float:left;width:180px;}
+div#bright{float:right;width:765px;background:#D7EDF9;}
+#admin_welcome_message{padding:50px 0px 50px 0px;text-align:center;}
+#msg_l_lst ul {list-style: none;margin: 0;padding: 0;border: none;}
+#msg_l_lst li {border-bottom: 1px solid #646363;margin: 0;}
+#msg_l_lst li a {display: block;padding: 3px 5px 3px 0.5em;background-color: #FCEAAA;color: #000;text-decoration: none;width: 100%;}
+html>body #msg_l_lst li a {width: auto;}
+#msg_l_lst li a:hover {background-color: #F7C516;color: #000;}
+#msg_l_lst li a.active{background-color: #F7C516;color: #000;}
+#msg_l_lst li span {display: block;padding: 3px 5px 3px 0em;background-color: #F7C516;color: #000; font-weight:bold; text-decoration: none;width: 100%;}
+
+/* box design */
+div#bx{background:#778CCA;	padding:2px;}
+div#bx1{background:#F7C516; padding:2px;}
+div#bx2{background:#F7C516; padding:2px; margin:0px auto; width:350px;}
+.bx_hd{padding:2px 0px 4px 10px; color:#ffffff;}
+.bx_hd ul{padding:0px;margin:0px;}
+.bx_hd li{	display:inline;	margin:0;padding:0;}
+.bx_hd a{float:left;font:bold 108% Arial, Helvetica, sans-serif;color:#fff;display:block;padding:8px 10px 8px 5px;margin-right: 2px; /*spacing between each tab*/text-decoration:none;}
+.bx_hd a.active{float:left;	font:bold 108% Arial, Helvetica, sans-serif;color:#000;display:block;padding:8px 10px 8px 5px;background-color:#fff;margin-right: 2px; /*spacing between each tab*/text-decoration:none;}
+.bx_hd a:hover{text-decoration:none;background-color:#FCEAAA;color:#000;}
+.bx_hd a.active:hover{text-decoration:none;	background-color:#fff;color:#000;}
+.bx_hd li a {font:bold 108% Arial, Helvetica, sans-serif;color:#FFA11F;text-decoration:none; }
+.bx_hd li a:hover { text-decoration:none;}
+.bx_hd li a.alt {font:bold 108% Arial, Helvetica, sans-serif;color:#909090;text-decoration:none; }
+.bx_hd li a.alt:hover { text-decoration:none;}
+.bx_bd{padding:5px; background:#fff;}
+.bx_bd1{padding:5px; background:#FCEAAA;}
+.bx_bd2{padding:0px;background:#fff;}
+div#err{background:#F5D155; color:#000; padding:2px; margin:0px auto; text-align:center; width:500px; font-weight:normal;}
+div#err1{background:#F5D155; color:#000; padding:2px; margin:0px auto; text-align:center; width:500px; font-weight:normal;}
+.bx_sm{background:#CAE6FB; border:dashed 1px #298DDA; margin:5px auto; padding:5px; width:500px;}
+
+/* utility classes */
+.clear{	clear:both;}
+img{border:none;vertical-align:middle;}
+p{margin:3px 0px 0px 0px;padding:0px;}
+.separator_10px{height:10px;}
+/* normal classes */
+.pd_5{padding:5px;}
+.pd_10{padding:10px;}
+.top_heading{padding:5px 0px 5px 0px;border-bottom:dashed 1px #D2D2D2;}
+.top_heading h3{font:normal 123% Arial, Helvetica, sans-serif;	color: #000;margin:0px;}
+.item{text-align:left;}
+.item_c{text-align:center;}
+.item_r{text-align:right;}
+.item_pad_2{padding:2px 0px 2px 0px;text-align:left;}
+.item_pad_2_c{padding:2px 0px 2px 0px;text-align:center;}
+.item_pad_2_r{padding:2px 0px 2px 0px;text-align:right;}
+.item_pad_4{padding:4px 0px 4px 0px;text-align:left;}
+.item_pad_4_c{padding:4px 0px 4px 0px;text-align:center;}
+.item_pad_4_r{padding:4px 0px 4px 0px;text-align:right;}
+.field_item_left{padding:2px 0px 2px 0px;float:left;width:30%;text-align:right;}
+.field_item_right{padding:2px 0px 2px 0px;float:right;width:68%;text-align:left;}
+.customize_item_left{padding:2px 0px 2px 0px;float:left;width:20%;text-align:right;}
+.customize_item_right{padding:2px 0px 2px 0px;float:right;width:78%;text-align:left;}
+.message_box{background-color:#45458E;padding:5px 0px 5px 5px;text-align:center;color:#ffffff;font-weight:bold;}
+.message_box a{font:bold 100% Verdana, Arial, Helvetica, sans-serif;color:#ffffff;text-decoration:underline;}
+.message_box a:hover{text-decoration:underline;}
+.heading{font-weight:bold;padding:5px 0px 5px 0px; border-bottom:dashed 1px #333333;}
+/* default link */
+a {font-size:100%; font-weight:normal; color:#0461b4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+/* New Text and Link Sizes Added VSK 7.0*/
+.mini-text, a.mini-text { font-size:93%; }
+.normal-text, a.normal-text{font-size:100%;}
+.medium-text, a.medium-text{font-size:108%;}
+.xmedium-text, a.xmedium-text{font-size:116%;}
+.xxmedium-text, a.xxmedium-text{font-size:123.1%;}
+.large-text, a.large-text{font-size:131%;}
+.xlarge-text, a.xlarge-text{font-size:138.5%;}
+.xxlarge-text, a.xxlarge-text{font-size:146.5%;}
+.big-text, a.big-text{font-size:161.6%;}
+.xbig-text, a.xbig-text{font-size:167%;}
+.xxbig-text, a.xxbig-text{font-size:182%;}
+.xxxbig-text, a.xxxbig-text{font-size:197%;}
+.reverse, a.reverse {color:#3e3e3e;}
+.red, a.red {color:#c60000;}
+.green,a.green {color:#00890d;}
+.light,a.light {color:#888888;}
+.white,a.white{color:#fff;}
+.bold,a.bold {font-weight:bold;}
+.underline,a.underline, a.underline:hover { text-decoration:underline; }
+.nounderline,a.nounderline, a.nounderline:hover {text-decoration:none;}
+.line-through,a.line-through, a.line-through:hover  {  text-decoration:line-through;}
+.ptext { font:normal 108% verdana; line-height:20px;}
+.text_box_hover{width:180px;font:normal 100% Arial, Helvetica, sans-serif;color:#000;background-color:#E0F0F9;	border:solid 1px #298DDA;}
+.text_box{width:180px;font:normal 100% Arial, Helvetica, sans-serif;	color:#000;	border:solid 1px #298DDA;}
+.dropdown_list{	width:180px;font:normal 100% Arial, Helvetica, sans-serif;	color:#000;	border:solid 1px #298DDA;}
+.dropdown_list_small{width:140px;font:normal 100% Arial, Helvetica, sans-serif;color:#000;border:solid 1px #298DDA;}
+.button{padding:1px 2px 1px 2px;font-family:Arial, Helvetica, sans-serif;font-size:100%;}
+.red_text_bold{font-family:  Arial, Helvetica, sans-serif;font-size: 93%;color: #ff3300;font-weight: bold;}
+.red_style{font:bold 100% Arial, Helvetica, sans-serif;color: #ff3300;}
+.green_style{font:bold 100% Arial, Helvetica, sans-serif;color: #59D248;}
+.gold_style{font:bold 100% Arial, Helvetica, sans-serif;color: #E3BE13;}
+
+/* custom table */
+table.tdivupper{width:100%; font:normal 0.95em Arial, Helvetica, sans-serif; border:none; padding:0px; margin:0px; border-spacing:0; border-collapse:collapse; clear:right;}
+table.tdivupper tr th{padding:0px; border:none;}
+table.tdivupper tr td{padding:0px;border:none;}
+table.tdiv{width:100%; border:solid 1px #F7C516; padding:0px; margin:0px; border-spacing:0; border-collapse:collapse;	clear:right;}
+table.tdiv tr th{font-weight:bold;text-align:left;padding:4px 10px;background-color:#E8E3E3;vertical-align: middle;   color:#000; text-transform:uppercase;border-bottom:solid 1px #F7C516;border-right:solid 1px #F7C516;}
+table.tdiv tr td{vertical-align:top;font-weight:normal;text-align:left;padding:4px 10px;border-bottom:solid 1px #F7C516;border-right:solid 1px #F7C516;}
+.yel_bk{background-color:Yellow;}
+
+.hor_lst ul {margin:0px;padding:0px;}
+.hor_lst li {padding:0px 3px 0px 3px;list-style:none;display:inline;}
+.hor_lst li.first {padding:0px 3px 0px 0px;list-style:none;display:inline;}
+.hor_lst li.separator{padding:0px;margin:0px;list-style:none;display:inline;}
+
+/* VSK Item Style */
+.vd {position:relative;}
+.dur { position:absolute; display:inline-block; padding:1px 2px; background:#000; color:#fff; font-size:bold 93%; opacity: .70;filter:Alpha(Opacity=60);}
+
+.ver_lst ul {margin:0px;padding:0px;}
+.ver_lst li {padding:0px 0px 0px 10px;list-style:none;}
+
+.alt_bx{padding:10px;background:#EDF1FA;}
+.bx_bk {background:#E3E1E1; padding:3px; border:solid 1px #CCCCCC;}
+.bx_bk_lt {background:#F3F3F3;}
+
+.bx_br_tp{border-top:solid 1px #CCCCCC;}
+.bx_br_bt{border-bottom:solid 1px #CCCCCC;}
+.bx_br_both{border-top:solid 1px #EFEFEF;border-bottom:solid 1px #CCCCCC;}
+.bx_br_bt_light{border-bottom:solid 1px #EFEFEF;}
+
+/* styles added in VSK 5.3 and above */
+.btn{padding:2px 4px;}
+.box-expander{overflow:hidden}
+.box-expander-head{padding:5px;overflow:hidden;background:#fff;border:1px solid #eaeaea;cursor:pointer;cursor:hand}
+.box-expander-head-active{padding:5px;overflow:hidden;background:#6b8af7;border:1px solid #0230cd;cursor:pointer;cursor:hand}
+.box-expander-head:hover,.box-expander-head-active:hover{color:#000;background-color:#d9e0f8;border-color:#6b8af7}
+.box-expander-body{padding:2px;overflow:hidden;background:#fff;border:1px solid #eaeaea;}
+.ajax_out_box{overflow:hidden;border:1px solid #eaeaea;padding:5px; background:#fff;}
+.hoverbox{padding:5px 5px 15px 5px; overflow:hidden;}
+.hoverbox:hover{background-color:#d9e0f8;}
+.simplehover{padding:5px; overflow:hidden;}
+.simplehover:hover{background-color:#d9e0f8;}
+.alt_md{font:normal 108%;color:#565656;}
+.alt_sm{font:normal 93%;color:#565656;}
+.red_bx{font:normal 93%; background:#bc0101; color:#fff; padding:0px 4px;}
+.green_bx{font:normal 93%; background:#1a9701; color:#fff; padding:0px 4px;}
+img.avator_02{border:solid 1px #d8dcdf; background:#fff; padding:5px;}
+img.avator_02:hover{border:solid 1px #0230cd;}
+.bd_left {float:left; width:170px; padding-right:10px;}
+.bd_main {float:left; width:590px; padding:0px;}
+.bd_main_full {float: left; width:770px; padding:0px;}
+.bd_right {float:right; width:170px; padding:0px;}
+
+.chnl_left_mn2{float:left;width:689px;}
+.chnl_right_nav2{float:right;width:240px;}
+
+/* normal vertical list */
+.c_lst ul {margin:0px;padding:0px;}
+.c_lst li {padding:4px 0px 4px 10px;margin:0px;list-style:none;}
+.c_lst ul ul li {padding-left:20px;}
+.c_lst ul ul ul li {padding-left:30px;}
+.c_lst ul ul ul ul li {padding-left:40px;}
+.c_lst ul ul ul ul ul li {padding-left:50px;}
+.c_lst ul ul ul ul ul ul li {padding-left:60px;}
+
+.autosrc { font-weight:normal; width:108%; padding:2px; }
+
+/************************************/
+/* Flags */
+/*******
+/ Flags Icons
+/********/
+a.flag {padding:2px; display:block; float:left;}
+.flag-icon {width: 15px; height: 11px; padding:0px; background-image: url(images/flags.png); float:left; }
+.flag-united-states{background-position: -33px -565px;}
+.flag-turkey{background-position: -116px -537px;}
+.flag-saudi-arabia{background-position: -201px -453px;}
+.flag-portugal{background-position: -5px -453px; }
+.flag-mexico{background-position: -173px -369px;}
+.flag-japan{background-position: -257px -257px;}
+.flag-india{background-position: -33px -257px;}
+.flag-spain{background-position: -5px -173px; }
+.flag-france{background-position: -229px -173px;}
+.flag-united-kingdom{background-position: -285px -173px;}
+.flag-china{background-position: -33px -117px;}
+.flag-germany{background-position: -285px -117px;}
+.flag-brazil {background-position: -173px -61px;}
+.flag-italy {background-position: -173px -257px;}
+.flag-united-arab-emirates{background-position: -33px -5px;}
+.flag-czech-republic{background-position: -257px -117px;}
+.flag-greece{background-position: -257px -201px;}
+.flag-hungary{background-position: -229px -229px;}
+.flag-belgium{background-position: -229px -33px;}
+.flag-netherlands{background-position: -116px -397px;}
+.flag-romania{background-position: -116px -453px;}
+.flag-russian-federation{background-position: -145px -453px;}
+.flag-sweden{background-position: -33px -481px;}
+/* Other */
+.flag-andorra{background-position: -5px -5px; }
+.flag-afghanistan{background-position: -60px -5px;}
+.flag-albania{background-position: -145px -5px;}
+.flag-armenia{background-position: -173px -5px;}
+.flag-argentina  {background-position: -257px -5px;}
+.flag-american-samoa{background-position: -285px -5px;}
+.flag-austria{background-position: -5px -33px; }
+.flag-australia{background-position: -33px -33px;}
+.flag-aruba {background-position: -60px -33px;}
+.flag-country15{background-position: -88px -33px;}
+.flag-azerbaijan{background-position: -116px -33px;}
+.flag-bosnia-hercegovina{background-position: -145px -33px;}
+.flag-barbados{background-position: -173px -33px;}
+.flag-bangladesh{background-position: -201px -33px;}
+
+.flag-bulgaria{background-position: -285px -33px;}
+.flag-bahrain{background-position: -5px -61px; }
+.flag-burundi{background-position: -33px -61px;}
+.flag-benin{background-position: -60px -61px;}
+.flag-brunei-darussalam{background-position: -116px -61px;}
+.flag-bolivia{background-position: -145px -61px;}
+.flag-bahamas{background-position: -201px -61px;}
+.flag-bhutan{background-position: -229px -61px;}
+.flag-bouvet-island{background-position: -257px -61px;}
+.flag-botswana{background-position: -285px -61px;}
+.flag-belize{background-position: -33px -89px;}
+.flag-canada{background-position: -60px -89px;}
+.flag-comoros {background-position: -88px -89px;}
+.flag-central-african-republic{background-position: -145px -89px;}
+.flag-congo{background-position: -173px -89px;}
+.flag-switzerland{background-position: -201px -89px;}
+.flag-chile{background-position: -285px -89px;}
+.flag-cameroon{background-position: -5px -117px; }
+.flag-colombia{background-position: -60px -117px;}
+.flag-costa-rica{background-position: -88px -117px;}
+.flag-cuba{background-position: -145px -117px;}
+.flag-cyprus{background-position: -229px -117px;}
+
+.flag-djibouti {background-position: -5px -145px; }
+.flag-denmark {background-position: -33px -145px;}
+.flag-dominica{background-position: -60px -145px;}
+.flag-dominican-republic{background-position: -88px -145px;}
+.flag-ecuador{background-position: -145px -145px;}
+.flag-estonia{background-position: -173px -145px;}
+.flag-egypt {background-position: -201px -145px;}
+.flag-eritrea {background-position: -285px -145px;}
+.flag-ethiopia{background-position: -33px -173px;}
+.flag-finland {background-position: -88px -173px;}
+.flag-faroe-islands{background-position: -201px -173px;}
+.flag-gabon{background-position: -257px -173px;}
+.flag-grenada{background-position: -5px -201px; }
+.flag-ghana{background-position: -60px -201px;}
+.flag-gibraltar{background-position: -88px -201px;}
+.flag-greenland{background-position: -116px -201px;}
+.flag-gambia{background-position: -145px -201px;}
+.flag-guinea{background-position: -173px -201px;}
+
+.flag-guatemala{background-position: -5px -229px; }
+.flag-guam{background-position: -33px -229px;}
+.flag-guinea-bissau{background-position: -60px -229px;}
+.flag-guyana{background-position: -88px -229px;}
+.flag-hong-kong{background-position: -116px -229px;}
+.flag-honduras{background-position: -145px -229px;}
+.flag-haiti {background-position: -201px -229px;}
+
+.flag-indonesia{background-position: -257px -229px;}
+.flag-ireland{background-position: -285px -229px;}
+.flag-israel {background-position: -5px -257px; }
+.flag-iraq {background-position: -88px -257px;}
+.flag-iran{background-position: -116px -257px;}
+.flag-iceland {background-position: -145px -257px;}
+.flag-jamaica{background-position: -201px -257px;}
+.flag-jordan{background-position: -229px -257px;}
+.flag-kenya{background-position: -285px -257px;}
+.flag-kyrgyzstan{background-position: -5px -285px; }
+.flag-cambodia{background-position: -33px -285px;}
+.flag-kiribati {background-position: -60px -285px;}
+.flag-korea-north{background-position: -145px -285px;}
+.flag-korea-south{background-position: -173px -285px;}
+.flag-kuwait{background-position: -201px -285px;}
+.flag-kazakhstan{background-position: -257px -285px;}
+.flag-laos{background-position: -285px -285px;}
+.flag-lebanon{background-position: -5px -313px; }
+.flag-liechten-stein{background-position: -60px -313px;}
+.flag-sri-lanka{background-position: -88px -313px;}
+.flag-liberia{background-position: -116px -313px;}
+.flag-lesotho{background-position: -145px -313px;}
+.flag-lithuania{background-position: -173px -313px;}
+.flag-luxembourg{background-position: -201px -313px;}
+.flag-latvia{background-position: -229px -313px;}
+.flag-libya {background-position: -257px -313px;}
+.flag-morocco{background-position: -285px -313px;}
+.flag-monaco{background-position: -5px -341px; }
+.flag-moldova{background-position: -33px -341px;}
+.flag-madagascar{background-position: -60px -341px;}
+.flag-marshall-islands{background-position: -88px -341px;}
+.flag-mali{background-position: -145px -341px;}
+.flag-myanmar{background-position: -173px -341px;}
+.flag-mongolia{background-position: -201px -341px;}
+.flag-macau{background-position: -229px -341px;}
+.flag-martinique{background-position: -285px -341px;}
+.flag-mauritania{background-position: -5px -369px; }
+.flag-montserrat{background-position: -33px -369px;}
+.flag-malta{background-position: -60px -369px;}
+.flag-mauritius{background-position: -88px -369px;}
+.flag-maldives{background-position: -116px -369px;}
+.flag-malawi{background-position: -145px -369px;}
+.flag-malaysia{background-position: -201px -369px;}
+.flag-mozambique{background-position: -229px -369px;}
+.flag-namibia{background-position: -257px -369px;}
+.flag-niger{background-position: -5px -397px; }
+.flag-norfolk-island{background-position: -33px -397px;}
+.flag-nigeria{background-position: -60px -397px;}
+.flag-nicaragua{background-position: -88px -397px;}
+
+.flag-norway{background-position: -145px -397px;}
+.flag-nepal{background-position: -173px -397px;}
+.flag-nauru{background-position: -201px -397px;}
+.flag-niue{background-position: -229px -397px;}
+.flag-new-zealand{background-position: -257px -397px;}
+.flag-oman{background-position: -285px -397px;}
+.flag-panama{background-position: -5px -425px; }
+.flag-peru{background-position: -33px -425px;}
+.flag-paraguay{background-position: -60px -425px;}
+.flag-papua-new-guinea{background-position: -88px -425px;}
+.flag-philippines{background-position: -116px -425px;}
+.flag-pakistan{background-position: -145px -425px;}
+.flag-poland{background-position: -173px -425px;}
+.flag-puerto rico{background-position: -257px -425px;}
+.flag-palestine{background-position: -285px -425px;}
+.flag-palau{background-position: -33px -453px;}
+.flag-paraguay{background-position: -60px -453px;}
+.flag-qatar{background-position: -88px -453px;}
+
+
+.flag-rwanda{background-position: -173px -453px;}
+.flag-solomon-Islands{background-position: -229px -453px;}
+.flag-seychelles{background-position: -257px -453px;}
+.flag-sudan{background-position: -5px -481px; }
+
+.flag-singapore{background-position: -60px -481px;}
+.flag-pitcairn{background-position: -88px -481px;}
+.flag-slovenia{background-position: -116px -481px;}
+.flag-slovakia{background-position: -145px -481px;}
+.flag-sierra-leone{background-position: -173px -481px;}
+.flag-senegal{background-position: -229px -481px;}
+.flag-somalia{background-position: -257px -481px;}
+.flag-suriname{background-position: -285px -481px;}
+.flag-sao-tome-and-principe{background-position: -5px -509px; }
+.flag-syria{background-position: -60px -509px;}
+.flag-swaziland{background-position: -88px -509px;}
+.flag-chad{background-position: -145px -509px;}
+.flag-togo{background-position: -201px -509px;}
+.flag-thailand{background-position: -229px -509px;}
+.flag-tajikistan{background-position: -257px -509px;}
+.flag-country209{background-position: -285px -509px;}
+.flag-country210{background-position: -5px -537px; }
+.flag-turkmenistan{background-position: -33px -537px;}
+.flag-tunisia{background-position: -60px -537px;}
+.flag-tonga{background-position: -88px -537px;}
+.flag-trinidad-and-tobago{background-position: -145px -537px;}
+.flag-taiwan{background-position: -201px -537px;}
+.flag-tanzania{background-position: -229px -537px;}
+.flag-ukraine{background-position: -257px -537px;}
+.flag-uganda{background-position: -285px -537px;}
+.flag-uruguay{background-position: -60px -565px;}
+.flag-uzbekistan{background-position: -88px -565px;}
+.flag-vatican-city-state{background-position: -116px -565px;}
+.flag-saint-vincent{background-position: -145px -565px;}
+.flag-venezuela{background-position: -173px -565px;}
+.flag-virgin-islands{background-position: -201px -565px;}
+.flag-virgin-islands-us{background-position: -229px -565px;}
+.flag-vietnam{background-position: -257px -565px;}
+.flag-vanuatu{background-position: -285px -565px;}
+.flag-samoa{background-position: -60px -593px;}
+.flag-taiwan{background-position: -88px -593px;}
+.flag-yemen{background-position: -116px -593px;}
+.flag-south-africa{background-position: -145px -593px;}
+.flag-zambia{background-position: -173px -593px;}
+.flag-zimbabwe{background-position: -201px -593px;}
+
+/* Forum Related Classes */
+.alt_bld_02{font:bold 120% Arial, Helvetica, sans-serif;color:#000;}
+a.alt_bld_02{font:bold 120% Arial, Helvetica, sans-serif;color:#000;text-decoration:none;}
+a.alt_bld_02:hover{text-decoration:underline;}
+.light_sm{font:normal 93% Arial, Helvetica, sans-serif;color:#878787;}
+.forumtr{border-bottom:dashed 1px #c5c5c5;}
+.forumt table{width:100%; border:solid 1px #97D2EB; border-spacing:0;border-collapse:collapse;clear:right;}
+.forumt table tr th{font-weight:bold;text-align:left;padding:6px;border-bottom:dashed 1px #97D2EB;border-right:dashed 1px #97D2EB; color:#1264A1;}
+.forumt table tr td{vertical-align:top;font-weight:normal;text-align:left;padding:6px;border-bottom:dashed 1px #97D2EB;border-right:dashed 1px #97D2EB;}
+.forumt table tr td.alt{vertical-align:top;font-weight:normal;text-align:left;padding:6px;border-bottom:dashed 1px #97D2EB; border-left:none; background:#ccdeec;}
+
+.ftitle table{width:100%; border-spacing:0;border-collapse:collapse;padding:0px;clear:right;  border:solid 1px #97D2EB;}
+.ftitle table tr th{font-weight:normal;text-align:left;padding:5px 6px;  background: #3baae3 url(images/ui-bg_highlight-soft_50_3baae3_1x100.png) 50% 50% repeat-x; color:#fff; border-bottom:solid 1px #97D2EB;}
+.ftitle table tr th a {font:normal 100%; text-decoration:none; color:#fff; }
+a:hover{text-decoration:underline;}
+.ftitle table tr td{padding:3px 6px;border-bottom:solid 1px #97D2EB; border-right:solid 1px #97D2EB;}
+.ftitle table tr td.content{padding:3px 6px; border-right:solid 1px #97D2EB; border-bottom:none;}
+
+.vk-button {outline: 0; margin:0 4px 0 0; padding: .4em 1em; text-decoration:none !important; cursor:pointer; vertical-align:middle; position: relative; text-align: center; zoom: 1;
+    top: 0px;
+    left: 0px;
+}
+.vk-button .ui-icon {position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+.ui-adv-icon {position: relative; margin-top: -2px;}
+a.vk-button {float:left; }
+/* remove extra button width in IE */
+button.vk-button {width:auto; overflow:visible; }
+.vk-button .ui-adv-text {padding-left:3px;}
+.vk-button-icon-left-adv {padding-left: 5px;} 
+.vk-button-icon-left {padding-left: 2.1em;}
+.vk-button-icon-right { padding-right: 2.1em; }
+.vk-button-icon-left .ui-icon { right: auto; left: .2em; margin-left: 0; }
+.vk-button-icon-right .ui-icon { left: auto; right: .2em; margin-left: 0; }
+.vk-button-icon-left-adv .ui-adv-icon {right: auto; left: .2em; margin-left: 0; }
+.vk-button-icon-solo { display:block; width:8px; text-indent: -9999px; }	
+.my-button-icon { float:right; margin-left:10px; 
+}
+
+       
+/* group posts - added vsk 7.0 */
+.anscmt {position:relative;}
+.itm_cross {position:absolute; font:normal 108% Arial, default; width:15px; height:20px; right:5px; top:3px;}
+
+/* comment post css styles */
+#vcomment {font:normal 100% Helvetica, Arial, default; line-height:18px;}
+#vcomment .vskcmtcnt {padding-bottom:5px; position:relative;}
+#vcomment .itm_cross {position:absolute; right:4px; top:10px;}
+.vcomment .vskcmtcnt {position:relative;}
+.vcomment .itm_cross {position:absolute; right:3px; top:3px;}
+
+/* blog comment style */
+#bg_cmt .vskcmtcnt .citem {padding:5px; border:solid 1px #cccccc;}
+#bg_cmt .vskcmtcnt {font:normal 100% 'Georgia', arial, serif; }
+#bg_cmt .vskcmtcnt p {font:normal 120% 'Georgia', arial, serif; color:#000; line-height:20px; }
+#bg_cmt .vskcmtcnt a {font:normal 100% 'Georgia', arial, serif; color:#0084ff; }
+#bg_cmt .vskcmtcnt a.bld {font:bold 120% 'Georgia', arial, serif; color:#0084ff;}
+#bg_cmt .vskcmtcnt .action {font:normal 93% 'Georgia', arial, serif; color:#c5c5c5;}
+#bg_cmt .vskcmtcnt .action a {color:#333333; text-decoration:none;}
+#bg_cmt .vskcmtcnt .action a:hover {text-decoration:none;}
+#bg_cmt .vskcmtcnt .alt {color:#6a6a6a;}
+
+/* twitter bootstrap */
+/* Top Website Strip */
+.navbar-inner{background-color: #0088ce;color:#8cd7fd;}
+.navbar{color:#68b0d5;}
+.navbar-inner-sm{background-color: #282828;padding: 1px 20px;background-repeat: repeat-x;-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1);-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1);box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1);background-image: linear-gradient(top, #333333, #222222);}
+.navbar-inner-sm .nav {position: relative;left: 0;display: block;float: left;margin: 0 10px 0 0;}
+.navbar-inner-sm .nav.pull-right {float: right;}
+.navbar-inner-sm .nav > li {display: block;float: left;}
+.navbar-inner-sm .nav > li > a {float: none;padding: 4px 5px;line-height: 19px;color: #999999;text-decoration: none;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);}
+.navbar-inner-sm .nav > li > a:hover {background-color: transparent;color: #ffffff;text-decoration: none;}
+.navbar-inner-sm .nav .active > a,.navbar .nav .active > a:hover {color: #ffffff;text-decoration: none;background-color: #003753;}
+.navbar-inner-sm .divider-vertical {height: 27px;width: 1px;margin: 0 9px;overflow: hidden;background-color: #282828;border-left: 1px solid #3f3f3f; border-right: 1px solid #161616;}
+.navbar-inner-sm .nav.pull-right {margin-left: 10px;margin-right: 0;}
+.nav-login{width:400px;color:#000;}
+/* Close Top Website Strip */
+
+
+/* Subnav */
+/* Second Level Navigation System */
+.subnav {width: 100%;font-size:108%;height: 36px;background-color: #282828; /* Old browsers */background-repeat: repeat-x; /* Repeat the gradient */background-image: -moz-linear-gradient(top, #282828 0%, #404040 100%); /* FF3.6+ */background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(100%,#404040)); /* Chrome,Safari4+ */background-image: -webkit-linear-gradient(top, #282828 0%,#404040 100%); /* Chrome 10+,Safari 5.1+ */background-image: -ms-linear-gradient(top, #282828 0%,#404040 100%); /* IE10+ */background-image: -o-linear-gradient(top, #282828 0%,#404040 100%); /* Opera 11.10+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#404040',GradientType=0 ); /* IE6-9 */background-image: linear-gradient(top, #282828 0%,#404040 100%); /* W3C */border: 1px solid #343434;-webkit-border-radius: 4px;-moz-border-radius: 4px; border-radius: 4px;}
+.subnav .nav {margin-bottom: 0;}
+.subnav .nav > li > a {margin: 0;padding-top:11px;padding-bottom: 11px;border-left: 1px solid #3f3f3f;border-right: 1px solid #161616;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0; color:#898989;}
+.subnav .nav > li > a:hover {background-color: #1e1e1e; color:#fff; border-left: 1px solid #3f3f3f; border-right: 1px solid #161616;-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+.subnav .nav > .active > a,.subnav .nav > .active > a:hover {padding-left: 13px;color: #fff; background-color: #1c1c1c; border-right-color: #666666; border-left: 0;-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05); -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05); box-shadow: inset 0 3px 5px rgba(0,0,0,.05);}
+.subnav .nav > li.dropdown.open.active > a:hover,.subnav .nav > li.dropdown.open > a {color: #fff;background-color: #1c1c1c;border-color: #666666;}
+.subnav .nav > .active > a .caret,.subnav .nav > .active > a:hover .caret {border-top-color: #fff;}
+.subnav .nav li > a .caret {border-top-color: #898989;border-bottom-color: #898989;}
+.subnav .nav li > a:hover .caret {border-top-color: #fff;border-bottom-color: #fff;}
+.subnav .nav > li:first-child > a,.subnav .nav > li:first-child > a:hover {border-left: 0;padding-left: 12px;-webkit-border-radius: 4px 0 0 4px;-moz-border-radius: 4px 0 0 4px; border-radius: 4px 0 0 4px;}
+.subnav .nav > li:last-child > a {border-right: 0;}
+.subnav .dropdown-menu {-webkit-border-radius: 0 0 4px 4px;-moz-border-radius: 0 0 4px 4px;border-radius: 0 0 4px 4px;}
+.subnav input {border: 1px solid #3f3f3f;}
+/* Close Second Level Navigation System */
+
+.well {border : 1px solid #ccc;background-color: #f3f3f3; padding:7px;}
+.well-spad{border : 1px solid #eee;padding:2px;background-color: #f5f5f5; }
+
+
+
+.btn-large {font-size: 14px;font-weight: normal;padding: 8px 15px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.btn-small {padding: 5px 9px;font-size: 12px;line-height: 16px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.btn-mini {padding: 2px 6px;font-size: 11px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+
+.form-horizontal .control-group {margin-bottom: 10px;}
+ul.nav li.hovermenu:hover ul.dropdown-menu{display: block;}
+
+/************************************/
+/* Pagination Design Style */
+/************************************/
+.pagination {margin: 0;}
+.pagination a {float: left;padding: 0 10px;line-height: 26px;text-decoration: none;border: 1px solid #ddd;border-left-width: 0; color:#1c1c1c;}
+.pagination a:hover {background-color:#c9c9c9;}
+.pagination li.active a { background-color:#262626; color:#fff;}
+.psm .pagination a {float: left;padding: 0 6px;line-height: 23px;}
+/************************************/
+/* Close Pagination */
+/*************************************/
+.nav li a:hover { background-color:#1c1c1c; color:#fff; }
+.nmlst .nav li.active a, .nav li.active a:hover { background-color:#1c1c1c; color:#fff; }
+.nmform .form-horizontal .control-label {width: 80px;}
+.nmform .form-horizontal .controls {margin-left: 100px;}
+.nmtabs .nav-tabs > li > a,.nmtabs .nav-pills > li > a {padding-right: 8px;padding-left: 8px;margin-right: 2px;line-height: 10px;}
+.nav-tabs > .active > a,.nav-tabs > .active > a:hover {color: #fff;cursor: default;background-color: #1c1c1c;border: 1px solid #ddd;border-bottom-color: transparent;}
+.breadcrumb {padding: 7px 14px;margin: 0 0 7px;}
+.module_pd2{background:#fff;padding:1px;}
+.heading-round {-moz-border-radius-topleft: 6px;-webkit-border-top-left-radius: 6px; -moz-border-radius-topright: 6px;-webkit-border-top-right-radius: 6px; padding: 5px 8px; border-bottom: 1px solid #eee;}
+.heading-round h3 {font-size: 131.1%; font-weight:bold; color:#fff;}
+.vkbox {overflow: auto;background-color: #ffffff;border: 1px solid #999;border: 1px solid rgba(0, 0, 0, 0.3);*border: 1px solid #999;/* IE6-7 */-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;margin-bottom:7px;}
+.vkbox-fixed{width: 560px;}
+.vkbox-header {padding: 9px 15px;border-bottom: 1px solid #eee;}
+.vkbox-body {overflow-y: auto;max-height: 800px;padding: 15px;}
+.vkbox-footer {padding: 14px 15px 15px;margin-bottom: 0;text-align: right;background-color: #f5f5f5;border-top: 1px solid #ddd;-webkit-border-radius: 0 0 6px 6px;-moz-border-radius: 0 0 6px 6px;border-radius: 0 0 6px 6px;-webkit-box-shadow: inset 0 1px 0 #ffffff;-moz-box-shadow: inset 0 1px 0 #ffffff;box-shadow: inset 0 1px 0 #ffffff;*zoom: 1;}
+.vkbox-footer-sm {padding: 9px 15px;border-top: 1px solid #eee;}
+.vkbox-nm-body {padding: 10px;}
+.vkbox-sm-footer {padding: 5px 8px;text-align: right;background-color: #f5f5f5;border-top: 1px solid #ddd;-moz-border-radius-bottomleft: 6px;-webkit-border-bottom-left-radius: 6px; -moz-border-radius-bottomright: 6px; -webkit-border-bottom-right-radius: 6px;}
+.prating .progress {height: 8px; margin-bottom: 8px; overflow: hidden;background-color: #e00000; background-repeat: repeat-x;-webkit-border-radius: 4px;-moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); background-image: linear-gradient(top, #cf0101, #e00000);}
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px; }
+.ui-corner-tr { -moz-border-radius-topright: 6px; -webkit-border-top-right-radius: 6px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px; }
+.ui-corner-br { -moz-border-radius-bottomright: 6px; -webkit-border-bottom-right-radius: 6px; }
+.ui-corner-top { -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px; -moz-border-radius-topright: 6px; -webkit-border-top-right-radius: 6px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px; -moz-border-radius-bottomright: 6px; -webkit-border-bottom-right-radius: 6px; }
+.ui-corner-right {  -moz-border-radius-topright: 6px; -webkit-border-top-right-radius: 6px; -moz-border-radius-bottomright: 6px; -webkit-border-bottom-right-radius: 6px; }
+.ui-corner-left { -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px; -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px; }
+.ui-corner-all { -moz-border-radius: 6px; -webkit-border-radius: 6px; }
+.thumbnail {display: block;padding: 2px;line-height: 1;border: 1px solid #ddd;-webkit-border-radius: 2px; -moz-border-radius: 2px;border-radius: 2px;-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);}
+a.thumbnail:hover {border-color: #1c1c1c;-webkit-box-shadow: 0 1px 2px rgba(0, 105, 214, 0.25);-moz-box-shadow: 0 1px 2px rgba(0, 105, 214, 0.25); box-shadow: 0 1px 2px rgba(0, 105, 214, 0.25);}
+.thumbnail > img {display: block;max-width: 100%; margin-right: auto; margin-left: auto;}
+.thumbnail .caption {padding: 5px;}
+.activethumb {display: block;padding: 2px;line-height: 1;border-color: #1c1c1c;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;-webkit-box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25); box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25);}​
+a.activethumb {border-color: #1c1c1c;-webkit-box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25);box-shadow: 0 2px 4px rgba(0, 105, 214, 0.25);}
+.grp .btn-toolbar {margin-top: 3px;margin-bottom: 1px;}
+.up {border-left: 4px solid transparent;border-right: 4px solid transparent;border-bottom: 4px solid #000000;border-top: none;}

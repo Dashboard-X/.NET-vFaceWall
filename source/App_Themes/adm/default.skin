@@ -1,0 +1,9 @@
+<asp:ImageButton runat="server" width="110" height="27" ImageUrl="images/search.gif" skinid="search_button" />
+<asp:ImageButton runat="server" width="102" height="24" ImageUrl="images/login.gif" skinid="login" />
+<asp:Image runat="server" width="101" height="24" ImageUrl="images/sign_up.gif" skinid="signup" />
+
+<asp:button runat="server" cssClass="btn btn-primary btn-small" />
+<asp:button runat="server" cssClass="btn btn-primary btn-large" skinid="large" />
+<asp:button runat="server" cssClass="btn btn-primary btn-mini" skinid="small" />
+
+<asp:FileUpload runat="server" cssClass="text_box" />

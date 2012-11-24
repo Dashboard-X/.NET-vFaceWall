@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="channel.master.cs" Inherits="user_channel" %>
+
+<%@ Register Src="~/modules/footer.ascx" TagName="footer" TagPrefix="uc7" %>
+<%@ Register Src="~/modules/logo.ascx" TagName="logo" TagPrefix="uc1" %>
+<%@ Register Src="~/ads/h_728x90.ascx" TagName="h_728x90" TagPrefix="uc4" %>
+<%@ Register Src="~/modules/tnav.ascx" TagName="tnav" TagPrefix="uc5" %>
+
+<%@ Register Src="~/modules/tabs/simple.ascx" TagName="advance" TagPrefix="uc3" %>
+<!doctype html>
+<html itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/xhtml" xmlns:og='http://opengraphprotocol.org/schema/'
+xmlns:fb='http://www.facebook.com/2008/fbml'>
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+</head>
+<body>
+    
+    <uc5:tnav ID="tnav1" runat="server" />
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" AsyncPostBackTimeout="1000" runat="server" />
+    <div class="vcnt row-fluid">
+        <div id="logo">
+            <uc1:logo ID="logo1" runat="server" />
+        </div>
+        <div id="top_left">
+            <uc4:h_728x90 ID="h_728x901" runat="server" />
+        </div>
+    </div>
+    <uc3:advance ID="advance1" runat="server" />
+    <div class="vcnt item_pad row-fluid">
+        <asp:ContentPlaceHolder ID="MC" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="vcnt item_pad">
+        <uc7:footer ID="Footer1" runat="server" />
+    </div>
+    </form>
+    <div id="fb-root">
+    </div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({ appId: '<%= Social_Settings.FB_AppID %>', status: true, cookie: true,
+                xfbml: true
+            });
+        };
+        (function () {
+            var e = document.createElement('script'); e.async = true;
+            e.src = document.location.protocol +
+               '//connect.facebook.net/en_US/all.js';
+            document.getElementById('fb-root').appendChild(e);
+        } ());
+    </script>
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+</body>
+</html>

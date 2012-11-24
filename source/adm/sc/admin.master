@@ -1,0 +1,41 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="adm_sc_admin" %>
+
+<%@ Register Src="modules/nav_v2.ascx" TagName="nav_v2" TagPrefix="uc1" %>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </a><a class="brand" href="<%= Config.GetUrl("adm/sc/") %>">
+                    <%= Site_Settings.Website_Title %>
+                    Control Panel</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span2">
+                <uc1:nav_v2 ID="nav_v21" runat="server" />
+            </div>
+            <div class="span10">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="mini-layout item_c">
+            Created by MediaSoft Inc
+        </div>
+    </div>
+    </form>
+</body>
+</html>

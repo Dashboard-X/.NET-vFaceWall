@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutme" xml:space="preserve">
+    <value>About Me</value>
+  </data>
+  <data name="accountactivation" xml:space="preserve">
+    <value>Account Activation</value>
+  </data>
+  <data name="accountpassword" xml:space="preserve">
+    <value>account password</value>
+  </data>
+  <data name="account_activation_message" xml:space="preserve">
+    <value>&lt;strong&gt;Congratulation!&lt;/strong&gt; Your account has been created successfully.&lt;br /&gt;
+                                    You must activate your account by clicking on link which is sent to your provided
+                                    mail address.</value>
+  </data>
+  <data name="adultwarning" xml:space="preserve">
+    <value>Adult Warning</value>
+  </data>
+  <data name="adultwarningmessage" xml:space="preserve">
+    <value>You may only access this Section if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this Section. If you do not meet these requirements, then you do not have permission to use the Section.</value>
+  </data>
+  <data name="age" xml:space="preserve">
+    <value>age</value>
+  </data>
+  <data name="approved" xml:space="preserve">
+    <value>approved</value>
+  </data>
+  <data name="becomefanonfacebook" xml:space="preserve">
+    <value>become fan on facebook</value>
+  </data>
+  <data name="black" xml:space="preserve">
+    <value>black</value>
+  </data>
+  <data name="blue" xml:space="preserve">
+    <value>blue</value>
+  </data>
+  <data name="books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="change" xml:space="preserve">
+    <value>change</value>
+  </data>
+  <data name="changepassword" xml:space="preserve">
+    <value>change password</value>
+  </data>
+  <data name="channels" xml:space="preserve">
+    <value>Channels</value>
+  </data>
+  <data name="channelviews" xml:space="preserve">
+    <value>Channel Views</value>
+  </data>
+  <data name="charsleft" xml:space="preserve">
+    <value>chars left</value>
+  </data>
+  <data name="companies" xml:space="preserve">
+    <value>Companies</value>
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value>confirm</value>
+  </data>
+  <data name="contactus" xml:space="preserve">
+    <value>contact us</value>
+  </data>
+  <data name="country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="createaccount" xml:space="preserve">
+    <value>create account</value>
+  </data>
+  <data name="current" xml:space="preserve">
+    <value>current</value>
+  </data>
+  <data name="currentcity" xml:space="preserve">
+    <value>Current City</value>
+  </data>
+  <data name="education" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="emailAddress" xml:space="preserve">
+    <value>email address</value>
+  </data>
+  <data name="emailoptions" xml:space="preserve">
+    <value>Email Options</value>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>enabled</value>
+  </data>
+  <data name="enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="erroroccuredtext" xml:space="preserve">
+    <value>Error occured while processing your request.</value>
+  </data>
+  <data name="facebooklogin" xml:space="preserve">
+    <value>facebook login</value>
+  </data>
+  <data name="first" xml:space="preserve">
+    <value>first</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="flag" xml:space="preserve">
+    <value>flag</value>
+  </data>
+  <data name="followusontwitter" xml:space="preserve">
+    <value>follow us on twitter</value>
+  </data>
+  <data name="forest" xml:space="preserve">
+    <value>forest</value>
+  </data>
+  <data name="forgotpassword" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="forgotpassword_sent_text" xml:space="preserve">
+    <value>Validation key link has been sent to your email address, by clicking on link, you will be able to create your new password.</value>
+  </data>
+  <data name="friends" xml:space="preserve">
+    <value>friends</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="gray" xml:space="preserve">
+    <value>gray</value>
+  </data>
+  <data name="hobbies" xml:space="preserve">
+    <value>Hobbies</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="hometown" xml:space="preserve">
+    <value>Home Town</value>
+  </data>
+  <data name="interests" xml:space="preserve">
+    <value>Interests</value>
+  </data>
+  <data name="ipaddressblckedmessage" xml:space="preserve">
+    <value>IP Address ([message]) has been blocked by site administrator due to certain reason.&lt;br /&gt; Contact site Administrator for further assistance.</value>
+  </data>
+  <data name="ipaddressblocked" xml:space="preserve">
+    <value>IP Address Blocked</value>
+  </data>
+  <data name="joined" xml:space="preserve">
+    <value>Joined</value>
+  </data>
+  <data name="last" xml:space="preserve">
+    <value>last</value>
+  </data>
+  <data name="lastname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="lastsignin" xml:space="preserve">
+    <value>Last Sign In</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="loginviafacebook" xml:space="preserve">
+    <value>login via facebook</value>
+  </data>
+  <data name="manageaccount" xml:space="preserve">
+    <value>Manage Account</value>
+  </data>
+  <data name="message_06" xml:space="preserve">
+    <value>Login failed, please enter correct user name &amp;amp; password.</value>
+  </data>
+  <data name="message_07" xml:space="preserve">
+    <value>User Name not validated, please make sure you enter valid User Name</value>
+  </data>
+  <data name="message_channel_01" xml:space="preserve">
+    <value>Channel setting has been changed</value>
+  </data>
+  <data name="message_channel_02" xml:space="preserve">
+    <value>Channel theme has been changed</value>
+  </data>
+  <data name="message_channel_03" xml:space="preserve">
+    <value>Channel module settings have been changed</value>
+  </data>
+  <data name="message_channel_04" xml:space="preserve">
+    <value>Friend request validation failed!</value>
+  </data>
+  <data name="message_channel_05" xml:space="preserve">
+    <value>Friend request cancelled!</value>
+  </data>
+  <data name="message_channel_06" xml:space="preserve">
+    <value>Friend request, user validation failed!</value>
+  </data>
+  <data name="message_channel_07" xml:space="preserve">
+    <value>User has been added in your friend list successfully</value>
+  </data>
+  <data name="message_comment_01" xml:space="preserve">
+    <value>You typed some invalid words, correct and post again.</value>
+  </data>
+  <data name="message_emailoptions_01" xml:space="preserve">
+    <value>Confirmation mail has been sent to your new email address.</value>
+  </data>
+  <data name="message_emailoptions_02" xml:space="preserve">
+    <value>Email Options have been updated successfully.</value>
+  </data>
+  <data name="message_emailoptions_03" xml:space="preserve">
+    <value>Email &amp;amp; Password not validated.</value>
+  </data>
+  <data name="message_emailoptions_04" xml:space="preserve">
+    <value>Email Address has been changed successfully.</value>
+  </data>
+  <data name="message_emailoptions_05" xml:space="preserve">
+    <value>Enter a new email address and your current password, and click "Send Email". You will receive a confirmation email at the new address containing a link to confirm the change.</value>
+  </data>
+  <data name="message_emailoptions_06" xml:space="preserve">
+    <value>How Often We Email You</value>
+  </data>
+  <data name="message_emailoptions_07" xml:space="preserve">
+    <value>Send individual emails for the events below.</value>
+  </data>
+  <data name="message_emailoptions_08" xml:space="preserve">
+    <value>One of my videos receives a comment or a video response.</value>
+  </data>
+  <data name="message_emailoptions_09" xml:space="preserve">
+    <value>Someone leaves a comment on my channel.</value>
+  </data>
+  <data name="message_emailoptions_10" xml:space="preserve">
+    <value>I receive a private message.</value>
+  </data>
+  <data name="message_emailoptions_11" xml:space="preserve">
+    <value>I receive a friend invite from another user.</value>
+  </data>
+  <data name="message_emailoptions_12" xml:space="preserve">
+    <value>Someone subscribes to my channel.</value>
+  </data>
+  <data name="message_emailoptions_13" xml:space="preserve">
+    <value>Don't send any emails for the above events.</value>
+  </data>
+  <data name="message_managed_01" xml:space="preserve">
+    <value>Account password has been updated successfully.</value>
+  </data>
+  <data name="message_myaccount_01" xml:space="preserve">
+    <value>Your account has been created</value>
+  </data>
+  <data name="message_myaccount_02" xml:space="preserve">
+    <value>Your account has been activated</value>
+  </data>
+  <data name="message_pass_01" xml:space="preserve">
+    <value>Login failed, please enter correct user name &amp;amp; password.</value>
+  </data>
+  <data name="message_privacy_01" xml:space="preserve">
+    <value>Privacy options have been updated successfully.</value>
+  </data>
+  <data name="message_privacy_02" xml:space="preserve">
+    <value>Contact Restrictions</value>
+  </data>
+  <data name="message_privacy_03" xml:space="preserve">
+    <value>Allow only friends to send messages or share videos.</value>
+  </data>
+  <data name="message_profile_01" xml:space="preserve">
+    <value>Invalid image format, please upload proper image</value>
+  </data>
+  <data name="message_profile_02" xml:space="preserve">
+    <value>Photo has been changed successfully</value>
+  </data>
+  <data name="message_profile_03" xml:space="preserve">
+    <value>Profile has been updated successfully</value>
+  </data>
+  <data name="message_profile_04" xml:space="preserve">
+    <value>Failed to replace user photo</value>
+  </data>
+  <data name="message_profile_05" xml:space="preserve">
+    <value>Describe Yourself</value>
+  </data>
+  <data name="message_profile_06" xml:space="preserve">
+    <value>Website (URL)</value>
+  </data>
+  <data name="message_profile_07" xml:space="preserve">
+    <value>Personal Detail</value>
+  </data>
+  <data name="message_profile_08" xml:space="preserve">
+    <value>Display my age</value>
+  </data>
+  <data name="message_profile_09" xml:space="preserve">
+    <value>Do not display my age</value>
+  </data>
+  <data name="message_profile_10" xml:space="preserve">
+    <value>Hometown/Location</value>
+  </data>
+  <data name="message_profile_11" xml:space="preserve">
+    <value>Current Zip/Postal Code</value>
+  </data>
+  <data name="message_profile_12" xml:space="preserve">
+    <value>Jobs/Career</value>
+  </data>
+  <data name="message_profile_13" xml:space="preserve">
+    <value>Favorite Movies &amp;amp; Shows:</value>
+  </data>
+  <data name="message_profile_14" xml:space="preserve">
+    <value>Favorite Musics</value>
+  </data>
+  <data name="message_profile_15" xml:space="preserve">
+    <value>Favorite Books</value>
+  </data>
+  <data name="message_reg_01" xml:space="preserve">
+    <value>Accept terms of use &amp;amp; privacy policy before continue</value>
+  </data>
+  <data name="message_reg_03" xml:space="preserve">
+    <value>User name not available, please choose another one.</value>
+  </data>
+  <data name="message_reg_04" xml:space="preserve">
+    <value>Email address is already exist.</value>
+  </data>
+  <data name="meta_contactus_description" xml:space="preserve">
+    <value>Contact us to share feedbacks, submit bug reports, report against any sort of violation or copyright material.</value>
+  </data>
+  <data name="meta_forgotpassword_description" xml:space="preserve">
+    <value>Retrieve or reset your lost profile password by performing few simple steps. You will receive new password via your email address.</value>
+  </data>
+  <data name="meta_forgotpassword_title" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="meta_ipaddress_description" xml:space="preserve">
+    <value>Ip address through which you are accessing webiste have been blocked by site administrator, consult with site admin for more detail.</value>
+  </data>
+  <data name="meta_login_description" xml:space="preserve">
+    <value>Sign in to your account in order to authorize your identity and perform various activities with website.</value>
+  </data>
+  <data name="meta_login_title" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="meta_privacy_description" xml:space="preserve">
+    <value>Read our privacy policy before using our website in order to make sure which type of user data we store with us and how we keep protect and control our user data.</value>
+  </data>
+  <data name="meta_privacy_title" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="meta_register_description" xml:space="preserve">
+    <value>Sign up your account for free, create account, upload contents and share contents with friends and other people across the world.</value>
+  </data>
+  <data name="meta_register_title" xml:space="preserve">
+    <value>Sign up for free</value>
+  </data>
+  <data name="meta_terms_description" xml:space="preserve">
+    <value>Read our website terms of use and condition first before doing any activity within our website. We may reserve the right to take any action if you violate our terms of use.</value>
+  </data>
+  <data name="meta_terms_title" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="mostviewed" xml:space="preserve">
+    <value>Most Viewed</value>
+  </data>
+  <data name="movies" xml:space="preserve">
+    <value>Movies</value>
+  </data>
+  <data name="musics" xml:space="preserve">
+    <value>Musics</value>
+  </data>
+  <data name="myaccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="mychannel" xml:space="preserve">
+    <value>My Channel</value>
+  </data>
+  <data name="newpassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="nochannelfound" xml:space="preserve">
+    <value>No Channels Found</value>
+  </data>
+  <data name="occupations" xml:space="preserve">
+    <value>Occupations</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="pink" xml:space="preserve">
+    <value>pink</value>
+  </data>
+  <data name="prev" xml:space="preserve">
+    <value>previous</value>
+  </data>
+  <data name="princess" xml:space="preserve">
+    <value>princess</value>
+  </data>
+  <data name="privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="privacypolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="profilesetup" xml:space="preserve">
+    <value>Profile Setup</value>
+  </data>
+  <data name="recentlyadded" xml:space="preserve">
+    <value>Recently Added</value>
+  </data>
+  <data name="records" xml:space="preserve">
+    <value>records</value>
+  </data>
+  <data name="red" xml:space="preserve">
+    <value>red</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="registeration_message" xml:space="preserve">
+    <value>User Registration Services Has Been Blocked By Site Administrator</value>
+  </data>
+  <data name="registrationkeyvalidationfailed" xml:space="preserve">
+    <value>Registration Key validation failed, please try again</value>
+  </data>
+  <data name="relationshipstatus" xml:space="preserve">
+    <value>Relationship Status</value>
+  </data>
+  <data name="rememberme" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="retypenewpassword" xml:space="preserve">
+    <value>Retype new password</value>
+  </data>
+  <data name="savechanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="schools" xml:space="preserve">
+    <value>Schools</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>search</value>
+  </data>
+  <data name="showing" xml:space="preserve">
+    <value>showing</value>
+  </data>
+  <data name="signin" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="signout" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="sponsors" xml:space="preserve">
+    <value>sponsors</value>
+  </data>
+  <data name="stealth" xml:space="preserve">
+    <value>stealth</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>submit</value>
+  </data>
+  <data name="sunlight" xml:space="preserve">
+    <value>sunlight</value>
+  </data>
+  <data name="termsofuse" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="thismonthadded" xml:space="preserve">
+    <value>This Month Added</value>
+  </data>
+  <data name="thisweekadded" xml:space="preserve">
+    <value>This Week Added</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="todayadded" xml:space="preserve">
+    <value>Today Added</value>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="verifyoldpassword" xml:space="preserve">
+    <value>Verify old password</value>
+  </data>
+  <data name="views" xml:space="preserve">
+    <value>views</value>
+  </data>
+  <data name="website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+</root>
